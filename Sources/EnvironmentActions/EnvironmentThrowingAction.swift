@@ -5,7 +5,7 @@ public struct EnvironmentThrowingAction<Params>: Equatable {
     private let id: UUID
     private let action: (Params) throws -> Void
 
-    internal init(id: UUID, action: @escaping (Params) throws -> Void) {
+    public init(id: UUID, action: @escaping (Params) throws -> Void) {
         self.id = id
         self.action = action
     }

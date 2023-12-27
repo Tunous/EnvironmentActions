@@ -4,8 +4,8 @@ import Foundation
 public struct EnvironmentAction<Params>: Equatable {
     private let id: UUID
     private let action: (Params) -> Void
-
-    internal init(id: UUID, action: @escaping (Params) -> Void) {
+    
+    public init(id: UUID, action: @escaping (Params) -> Void) {
         self.id = id
         self.action = action
     }
